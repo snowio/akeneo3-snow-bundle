@@ -1,5 +1,5 @@
 {
-  "name": "snowio/akeneo-bundle",
+  "name": "snowio/akeneo2-snow-bundle",
   "license": "MIT",
   "authors": [
     {
@@ -8,6 +8,9 @@
     }, {
       "name": "Nei Santos",
       "email": "ns@amp.co"
+    }, {
+      "name": "Liam Toohey",
+      "email": "lt@amp.co"
     }
   ],
   "repositories": [
