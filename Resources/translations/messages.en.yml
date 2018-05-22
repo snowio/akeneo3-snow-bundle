@@ -11,9 +11,9 @@ batch_jobs:
         post.label: "Post Step"
         media_export.label: "Media Export Step"
     full_export:
-        label: "Full Export (products, variant groups, categories, attributes, attribute options, families and attribute groups)"
+        label: "Full Export (products, product models, categories, attributes, attribute options, families and attribute groups)"
         product.label: "Product Export Step"
-        variant_group.label: "Variant Group Export Step"
+        product_model.label: "Product model Export Step"
         category.label:  "Category Export Step"
         attribute.label: "Attribute Export Step"
         attribute_option.label: "Attribute Option Export Step"

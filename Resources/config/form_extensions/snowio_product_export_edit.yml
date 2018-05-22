@@ -74,7 +74,7 @@ extensions:
         module: pim/job/common/edit/field/decimal-separator
         parent: snowio-csv-product-export-edit-properties
         position: 120
-        targetZone: global-settings
+        targetZone: properties
         config:
             fieldCode: configuration.decimalSeparator
             readOnly: false
@@ -85,7 +85,7 @@ extensions:
         module: pim/job/product/edit/field/date-format
         parent: snowio-csv-product-export-edit-properties
         position: 130
-        targetZone: global-settings
+        targetZone: properties
         config:
             fieldCode: configuration.dateFormat
             readOnly: false
@@ -96,7 +96,7 @@ extensions:
         module: pim/job/common/edit/field/text
         parent: snowio-csv-product-export-edit-properties
         position: 140
-        targetZone: global-settings
+        targetZone: properties
         config:
             fieldCode: configuration.delimiter
             readOnly: false
@@ -107,7 +107,7 @@ extensions:
         module: pim/job/common/edit/field/text
         parent: snowio-csv-product-export-edit-properties
         position: 150
-        targetZone: global-settings
+        targetZone: properties
         config:
             fieldCode: configuration.enclosure
             readOnly: false
@@ -118,7 +118,7 @@ extensions:
         module: pim/job/common/edit/field/switch
         parent: snowio-csv-product-export-edit-properties
         position: 160
-        targetZone: global-settings
+        targetZone: properties
         config:
             fieldCode: configuration.withHeader
             readOnly: false
@@ -129,7 +129,7 @@ extensions:
         module: pim/job/common/edit/field/switch
         parent: snowio-csv-product-export-edit-properties
         position: 170
-        targetZone: global-settings
+        targetZone: properties
         config:
             fieldCode: configuration.with_media
             readOnly: false
@@ -140,7 +140,7 @@ extensions:
         module: pim/job/common/edit/field/text
         parent: snowio-csv-product-export-edit-properties
         position: 180
-        targetZone: global-settings
+        targetZone: properties
         config:
             fieldCode: configuration.endpoint
             readOnly: false
@@ -151,7 +151,7 @@ extensions:
         module: pim/job/common/edit/field/text
         parent: snowio-csv-product-export-edit-properties
         position: 190
-        targetZone: global-settings
+        targetZone: properties
         config:
             fieldCode: configuration.applicationId
             readOnly: false
@@ -162,7 +162,7 @@ extensions:
         module: pim/job/common/edit/field/text
         parent: snowio-csv-product-export-edit-properties
         position: 200
-        targetZone: global-settings
+        targetZone: properties
         config:
             fieldCode: configuration.secretKey
             readOnly: false
@@ -173,7 +173,7 @@ extensions:
         module: pim/job/common/edit/field/text
         parent: snowio-csv-product-export-edit-properties
         position: 210
-        targetZone: global-settings
+        targetZone: properties
         config:
             fieldCode: configuration.exportDir
             readOnly: false
@@ -184,7 +184,7 @@ extensions:
         module: pim/job/common/edit/field/text
         parent: snowio-csv-product-export-edit-properties
         position: 220
-        targetZone: global-settings
+        targetZone: properties
         config:
             fieldCode: configuration.rsyncDirectory
             readOnly: false
@@ -195,7 +195,7 @@ extensions:
         module: pim/job/common/edit/field/text
         parent: snowio-csv-product-export-edit-properties
         position: 230
-        targetZone: global-settings
+        targetZone: properties
         config:
             fieldCode: configuration.rsyncUser
             readOnly: false
@@ -206,7 +206,7 @@ extensions:
         module: pim/job/common/edit/field/text
         parent: snowio-csv-product-export-edit-properties
         position: 240
-        targetZone: global-settings
+        targetZone: properties
         config:
             fieldCode: configuration.rsyncHost
             readOnly: false
@@ -217,7 +217,7 @@ extensions:
         module: pim/job/common/edit/field/text
         parent: snowio-csv-product-export-edit-properties
         position: 240
-        targetZone: global-settings
+        targetZone: properties
         config:
             fieldCode: configuration.rsyncOptions
             readOnly: false
@@ -235,15 +235,6 @@ extensions:
         parent: snowio-csv-product-export-edit
         targetZone: meta
         position: 100
-
-    snowio-csv-product-export-edit-back-to-grid:
-        module: pim/form/common/back-to-grid
-        parent: snowio-csv-product-export-edit
-        targetZone: back
-        aclResourceId: pim_importexport_export_profile_index
-        position: 80
-        config:
-            backUrl: pim_importexport_export_profile_index
 
     snowio-csv-product-export-edit-delete:
         module: pim/job/export/edit/delete

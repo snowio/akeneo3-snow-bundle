@@ -2,9 +2,9 @@
 
 namespace Snowio\Bundle\CsvConnectorBundle\Writer\File\Csv;
 
-use Pim\Component\Connector\Writer\File\Csv\VariantGroupWriter as BaseVariantGroupWriter;
+use Pim\Component\Connector\Writer\File\Csv\ProductModelWriter as BaseProductModelWriter;
 
-class ProductModelWriter extends BaseVariantGroupWriter
+class ProductModelWriter extends BaseProductModelWriter
 {
     use WriterOverriderTrait;
 }

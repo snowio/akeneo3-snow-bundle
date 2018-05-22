@@ -89,7 +89,8 @@ services:
         class: '%pim_connector.step.item_step.class%'
         parent: 'pim_connector.step.csv_product_model.export'
         arguments:
-            index_0: 'variant_group'
+            index_0: 'product_model'
+            index_3: '@snowio_connector.reader.database.product_model'
             index_5: '@snowio_connector.writer.file.csv_product_model'
 
     snowio_connector.step.csv_category.export:
