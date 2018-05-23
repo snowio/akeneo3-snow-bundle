@@ -1,0 +1,37 @@
+batch_jobs:
+    partial_export:
+        label: "Partial Export (categories, attributes, attribute options, families and attribute groups)"
+        category.label:  "Category Export Step"
+        attribute.label: "Attribute Export Step"
+        attribute_option.label: "Attribute Option Export Step"
+        family.label: "Family Export Step"
+        attribute_group.label: "Attribute Group Export Step"
+        archive.label: "Archive Step"
+        metadata.label: "Metadata Step"
+        post.label: "Post Step"
+        media_export.label: "Media Export Step"
+    full_export:
+        label: "Full Export (products, product models, categories, attributes, attribute options, families and attribute groups)"
+        product.label: "Product Export Step"
+        product_model.label: "Product model Export Step"
+        category.label:  "Category Export Step"
+        attribute.label: "Attribute Export Step"
+        attribute_option.label: "Attribute Option Export Step"
+        family.label: "Family Export Step"
+        attribute_group.label: "Attribute Group Export Step"
+        archive.label: "Archive Step"
+        metadata.label: "Metadata Step"
+        post.label: "Post Step"
+        media_export.label: "Media Export Step"
+        check_thresholds.label: "Check Thresholds Step"
+
+job_execution:
+    summary:
+        endpoint: Endpoint
+        response_code: Response code
+        response_body: Body
+        zip_location: Zip file
+        metadata_location: Metadata file
+        export_location: Export location
+        log_file: Log file
+        minimum_threshold: Minimum threshold
