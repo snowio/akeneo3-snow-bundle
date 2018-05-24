@@ -2,184 +2,44 @@ extensions:
     snowio-csv-export-show:
         module: pim/form/common/edit-form
 
-    snowio-csv-export-show-tabs:
-        module: pim/form/common/form-tabs
+    snowio-csv-export-show-main-image:
+        module: pim/form/common/main-image
         parent: snowio-csv-export-show
-        targetZone: content
-        position: 100
-
-    snowio-csv-export-show-properties:
-        module: pim/job/common/edit/properties
-        parent: snowio-csv-export-show-tabs
-        aclResourceId: pim_importexport_export_profile_property_edit
-        targetZone: container
-        position: 100
+        targetZone: main-image
         config:
-            tabTitle: pim_enrich.form.job_instance.tab.properties.title
-            tabCode: pim-job-instance-properties
+            path: bundles/pimui/images/illustration-export-csv.svg
 
-    snowio-csv-export-show-history:
-        module: pim/common/tab/history
-        parent: snowio-csv-export-show-tabs
-        targetZone: container
-        aclResourceId: pim_importexport_export_profile_history
-        position: 120
+    snowio-csv-export-show-user-navigation:
+        module: pim/menu/user-navigation
+        parent: snowio-csv-export-show
+        targetZone: user-menu
         config:
-            class: Akeneo\Component\Batch\Model\JobInstance
-            title: pim_enrich.form.job_instance.tab.history.title
-            tabCode: pim-job-instance-history
+            userAccount: pim_menu.user.user_account
+            logout: pim_menu.user.logout
 
-    snowio-csv-export-show-properties-code:
-        module: pim/job/common/edit/field/text
-        parent: snowio-csv-export-show-properties
-        position: 100
-        targetZone: properties
+    snowio-csv-export-show-breadcrumbs:
+        module: pim/common/breadcrumbs
+        parent: snowio-csv-export-show
+        targetZone: breadcrumbs
         config:
-            fieldCode: code
-            label: pim_enrich.form.job_instance.tab.properties.code.title
-            readOnly: true
+            tab: pim-menu-exports
 
-    snowio-csv-export-show-properties-label:
-        module: pim/job/common/edit/field/text
-        parent: snowio-csv-export-show-properties
+    snowio-csv-export-show-launch:
+        module: pim/job/common/edit/launch
+        parent: snowio-csv-export-show
+        targetZone: meta
         position: 110
-        targetZone: properties
         config:
-            fieldCode: label
-            label: pim_enrich.form.job_instance.tab.properties.label.title
-            readOnly: true
-
-    snowio-csv-export-show-properties-delimiter:
-        module: pim/job/common/edit/field/text
-        parent: snowio-csv-export-show-properties
-        position: 120
-        targetZone: properties
-        config:
-            fieldCode: configuration.delimiter
-            readOnly: true
-            label: pim_enrich.form.job_instance.tab.properties.delimiter.title
-            tooltip: pim_enrich.form.job_instance.tab.properties.delimiter.help
-
-    snowio-csv-export-show-properties-enclosure:
-        module: pim/job/common/edit/field/text
-        parent: snowio-csv-export-show-properties
-        position: 130
-        targetZone: properties
-        config:
-            fieldCode: configuration.enclosure
-            readOnly: true
-            label: pim_enrich.form.job_instance.tab.properties.enclosure.title
-            tooltip: pim_enrich.form.job_instance.tab.properties.enclosure.help
-
-    snowio-csv-export-show-properties-with-header:
-        module: pim/job/common/edit/field/switch
-        parent: snowio-csv-export-show-properties
-        position: 140
-        targetZone: properties
-        config:
-            fieldCode: configuration.withHeader
-            readOnly: true
-            label: pim_enrich.form.job_instance.tab.properties.with_header.title
-            tooltip: pim_enrich.form.job_instance.tab.properties.with_header.help
-
-    snowio-csv-export-show-properties-endpoint:
-        module: pim/job/common/edit/field/text
-        parent: snowio-csv-export-show-properties
-        position: 150
-        targetZone: properties
-        config:
-            fieldCode: configuration.endpoint
-            readOnly: true
-            label: snowio_connector.form.job_instance.tab.properties.endpoint.title
-            tooltip: snowio_connector.form.job_instance.tab.properties.endpoint.help
-
-    snowio-csv-export-show-properties-application-id:
-        module: pim/job/common/edit/field/text
-        parent: snowio-csv-export-show-properties
-        position: 160
-        targetZone: properties
-        config:
-            fieldCode: configuration.applicationId
-            readOnly: true
-            label: snowio_connector.form.job_instance.tab.properties.application_id.title
-            tooltip: snowio_connector.form.job_instance.tab.properties.application_id.help
-
-    snowio-csv-export-show-properties-secret-key:
-        module: pim/job/common/edit/field/text
-        parent: snowio-csv-export-show-properties
-        position: 170
-        targetZone: properties
-        config:
-            fieldCode: configuration.secretKey
-            readOnly: true
-            label: snowio_connector.form.job_instance.tab.properties.secret_key.title
-            tooltip: snowio_connector.form.job_instance.tab.properties.secret_key.help
-
-    snowio-csv-export-show-properties-export-dir:
-        module: pim/job/common/edit/field/text
-        parent: snowio-csv-export-show-properties
-        position: 180
-        targetZone: properties
-        config:
-            fieldCode: configuration.exportDir
-            readOnly: true
-            label: snowio_connector.form.job_instance.tab.properties.export_dir.title
-            tooltip: snowio_connector.form.job_instance.tab.properties.export_dir.help
-
-    snowio-csv-export-show-properties-rsync-directory:
-        module: pim/job/common/edit/field/text
-        parent: snowio-csv-export-show-properties
-        position: 190
-        targetZone: properties
-        config:
-            fieldCode: configuration.rsyncDirectory
-            readOnly: true
-            label: snowio_connector.form.job_instance.tab.properties.rsync_directory.title
-            tooltip: snowio_connector.form.job_instance.tab.properties.rsync_directory.help
-
-    snowio-csv-export-show-properties-rsync-user:
-        module: pim/job/common/edit/field/text
-        parent: snowio-csv-export-show-properties
-        position: 200
-        targetZone: properties
-        config:
-            fieldCode: configuration.rsyncUser
-            readOnly: true
-            label: snowio_connector.form.job_instance.tab.properties.rsync_user.title
-            tooltip: snowio_connector.form.job_instance.tab.properties.rsync_user.help
-
-    snowio-csv-export-show-properties-rsync-host:
-        module: pim/job/common/edit/field/text
-        parent: snowio-csv-export-show-properties
-        position: 210
-        targetZone: properties
-        config:
-            fieldCode: configuration.rsyncHost
-            readOnly: true
-            label: snowio_connector.form.job_instance.tab.properties.rsync_host.title
-            tooltip: snowio_connector.form.job_instance.tab.properties.rsync_host.help
-
-    snowio-csv-export-show-properties-rsync-options:
-        module: pim/job/common/edit/field/text
-        parent: snowio-csv-export-show-properties
-        position: 200
-        targetZone: properties
-        config:
-            fieldCode: configuration.rsyncOptions
-            readOnly: true
-            label: snowio_connector.form.job_instance.tab.properties.rsync_options.title
-            tooltip: snowio_connector.form.job_instance.tab.properties.rsync_options.help
+            label: pim_enrich.form.job_instance.button.export.title
+            route: pim_enrich_job_instance_rest_export_launch
+            identifier:
+                path: code
+                name: code
 
     snowio-csv-export-show-label:
         module: pim/job/common/edit/label
         parent: snowio-csv-export-show
         targetZone: title
-        position: 100
-
-    snowio-csv-export-show-meta:
-        module: pim/job/common/edit/meta
-        parent: snowio-csv-export-show
-        targetZone: meta
         position: 100
 
     snowio-csv-export-show-edit:
@@ -190,18 +50,24 @@ extensions:
         config:
             label: pim_enrich.form.job_instance.button.edit.title
             route: pim_importexport_export_profile_edit
+            buttonClass: AknButton AknButton--action
             identifier:
                 path: code
                 name: code
 
-    snowio-csv-export-show-launch:
-        module: pim/job/common/edit/launch
+    snowio-csv-export-show-subsection:
+        module: pim/form/common/subsection
         parent: snowio-csv-export-show
-        targetZone: buttons
-        position: 110
+        targetZone: content
         config:
-            label: pim_enrich.form.job_instance.button.export.title
-            route: pim_enrich_job_instance_rest_export_launch
-            identifier:
-                path: code
-                name: code
+            title: pim_enrich.form.job_instance.subsection.last_executions
+
+    snowio-csv-export-show-grid:
+        module: pim/job/common/grid
+        parent: snowio-csv-export-show-subsection
+        position: 1000
+        targetZone: content
+        config:
+            alias: last-export-executions-grid
+            metadata:
+                jobType: export
