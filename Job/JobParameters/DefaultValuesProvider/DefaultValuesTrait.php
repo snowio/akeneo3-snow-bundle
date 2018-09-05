@@ -24,7 +24,7 @@ trait DefaultValuesTrait
             'rsyncDirectory'=> '',
             'rsyncUser'     => '',
             'rsyncHost'     => '',
-            'rsyncOptions'  => [],
+            'rsyncOptions'  => '',
         ], $simpleDefaults);
     }
 }
