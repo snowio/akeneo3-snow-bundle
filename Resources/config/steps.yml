@@ -121,6 +121,13 @@ services:
             index_0: 'family'
             index_5: '@snowio_connector.writer.file.csv_family'
 
+    snowio_connector.step.csv_family_variant.export:
+        class: '%pim_connector.step.item_step.class%'
+        parent: 'pim_connector.step.csv_family_variant.export'
+        arguments:
+            index_0: 'family_variant'
+            index_5: '@snowio_connector.writer.file.csv_family_variant'
+
     snowio_connector.step.csv_attribute_group.export:
         class: '%pim_connector.step.item_step.class%'
         parent: 'pim_connector.step.csv_attribute_group_export.export'

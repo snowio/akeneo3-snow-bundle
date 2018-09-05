@@ -28,6 +28,10 @@ services:
     class: %snowio_connector.writer.file.csv_simple.class%
     parent: pim_connector.writer.file.csv_family
 
+  snowio_connector.writer.file.csv_family_variant:
+    class: %snowio_connector.writer.file.csv_simple.class%
+    parent: pim_connector.writer.file.csv_family_variant
+
   snowio_connector.writer.file.csv_attribute_group:
     class: %snowio_connector.writer.file.csv_simple.class%
     parent: pim_connector.writer.file.csv_attribute_group
