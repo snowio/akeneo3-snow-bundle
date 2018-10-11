@@ -25,6 +25,9 @@ class MediaExportStep extends AbstractStep
     /** @var Logger */
     private $logger;
 
+    /** @var string */
+    private $assetStorageDir;
+
     /**
      * MediaExportStep constructor.
      * @param string $name
@@ -32,17 +35,20 @@ class MediaExportStep extends AbstractStep
      * @param JobRepositoryInterface $jobRepository
      * @param ExportLocation $exportLocation
      * @param Logger $logger
+     * @param string $assetStorageDir
      */
     public function __construct(
         $name,
         EventDispatcherInterface $eventDispatcher,
         JobRepositoryInterface $jobRepository,
         ExportLocation $exportLocation,
-        Logger $logger
+        Logger $logger,
+        $assetStorageDir = ''
     ) {
         parent::__construct($name, $eventDispatcher, $jobRepository);
         $this->exportLocation = $exportLocation;
         $this->logger = $logger;
+        $this->assetStorageDir = rtrim($assetStorageDir, "/");
     }
 
     /**
@@ -107,13 +113,23 @@ class MediaExportStep extends AbstractStep
     protected function syncMedia($currentExportDir, $newExportDir, $options = '')
     {
         /**
-         * append files to the current export dir so that we do not unnecessarily
-         * copy over the export csv files
+         * Intentionally copy the export csv files - often we'll need additional data in Magento, and this
+         * simplifies getting it.
+         * for instance, we need attributes definitions for definition providers.
          */
-        exec("rsync -aK $options $currentExportDir/files/ $newExportDir/", $output, $status);
+        exec("rsync -aK $options $currentExportDir/ $newExportDir/", $output, $status);
 
         if ($status !== 0) {
             throw new FileTransferException('Error - rsync failure during media export.' . implode(" : ", $output));
+        }
+
+        if (is_dir($this->assetStorageDir)) {
+            exec("rsync -aK $options $this->assetStorageDir/ $newExportDir/", $assetRsyncOutput, $status);
+            if ($status !== 0) {
+                throw new FileTransferException('Error - rsync failure during asset export.' . implode(" : ", $assetRsyncOutput));
+            }
+
+            $output .= "\n" . $assetRsyncOutput;
         }
 
         return $output;
