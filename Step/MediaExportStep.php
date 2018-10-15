@@ -129,7 +129,7 @@ class MediaExportStep extends AbstractStep
                 throw new FileTransferException('Error - rsync failure during asset export.' . implode(" : ", $assetRsyncOutput));
             }
 
-            $output .= "\n" . $assetRsyncOutput;
+            $output = array_merge($output, $assetRsyncOutput);
         }
 
         return $output;
