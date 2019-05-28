@@ -4,12 +4,12 @@ namespace spec\Snowio\Bundle\CsvConnectorBundle\Step;
 
 use PhpSpec\ObjectBehavior;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use Akeneo\Component\Batch\Job\JobRepositoryInterface;
-use Akeneo\Component\Batch\Model\StepExecution;
-use Akeneo\Component\Batch\Job\BatchStatus;
-use Akeneo\Component\Batch\Job\ExitStatus;
-use Akeneo\Component\Batch\Event\EventInterface;
-use Akeneo\Component\Batch\Job\JobParameters;
+use Akeneo\Tool\Component\Batch\Job\JobRepositoryInterface;
+use Akeneo\Tool\Component\Batch\Model\StepExecution;
+use Akeneo\Tool\Component\Batch\Job\BatchStatus;
+use Akeneo\Tool\Component\Batch\Job\ExitStatus;
+use Akeneo\Tool\Component\Batch\Event\EventInterface;
+use Akeneo\Tool\Component\Batch\Job\JobParameters;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
 use Psr\Http\Message\StreamInterface;

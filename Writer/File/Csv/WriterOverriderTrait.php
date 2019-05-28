@@ -2,7 +2,7 @@
 
 namespace Snowio\Bundle\CsvConnectorBundle\Writer\File\Csv;
 
-use Akeneo\Component\Batch\Job\JobInterface;
+use Akeneo\Tool\Component\Batch\Job\JobInterface;
 
 trait WriterOverriderTrait
 {

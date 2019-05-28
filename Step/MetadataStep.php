@@ -2,8 +2,8 @@
 
 namespace Snowio\Bundle\CsvConnectorBundle\Step;
 
-use Akeneo\Component\Batch\Step\AbstractStep;
-use Akeneo\Component\Batch\Model\StepExecution;
+use Akeneo\Tool\Component\Batch\Step\AbstractStep;
+use Akeneo\Tool\Component\Batch\Model\StepExecution;
 use Snowio\Bundle\CsvConnectorBundle\SnowioCsvConnectorBundle;
 
 class MetadataStep extends AbstractStep

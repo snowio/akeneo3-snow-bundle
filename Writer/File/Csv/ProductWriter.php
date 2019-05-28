@@ -2,7 +2,7 @@
 
 namespace Snowio\Bundle\CsvConnectorBundle\Writer\File\Csv;
 
-use Pim\Component\Connector\Writer\File\Csv\ProductWriter as BaseProductWriter;
+use Akeneo\Pim\Enrichment\Component\Product\Connector\Writer\File\Csv\ProductWriter as BaseProductWriter;
 
 class ProductWriter extends BaseProductWriter
 {

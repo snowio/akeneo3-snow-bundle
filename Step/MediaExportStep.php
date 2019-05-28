@@ -2,11 +2,11 @@
 
 namespace Snowio\Bundle\CsvConnectorBundle\Step;
 
-use Akeneo\Component\Batch\Job\JobRepositoryInterface;
-use Akeneo\Component\Batch\Model\JobExecution;
-use Akeneo\Component\Batch\Model\StepExecution;
-use Akeneo\Component\Batch\Step\AbstractStep;
-use Akeneo\Component\FileStorage\Exception\FileTransferException;
+use Akeneo\Tool\Component\Batch\Job\JobRepositoryInterface;
+use Akeneo\Tool\Component\Batch\Model\JobExecution;
+use Akeneo\Tool\Component\Batch\Model\StepExecution;
+use Akeneo\Tool\Component\Batch\Step\AbstractStep;
+use Akeneo\Tool\Component\FileStorage\Exception\FileTransferException;
 use Snowio\Bundle\CsvConnectorBundle\MediaExport\ExportLocation;
 use Snowio\Bundle\CsvConnectorBundle\MediaExport\Logger;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
@@ -15,7 +15,7 @@ use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 /**
  * This class rsyncs media files to a configurable location and logs some info a separate log file
  * Forcing reconnect to MySQL was looked into as part of this, which is not necessary:
- * @see \Akeneo\Bundle\BatchBundle\Job\DoctrineJobRepository::updateStepExecution
+ * @see \Akeneo\Tool\Bundle\BatchBundle\Job\DoctrineJobRepository::updateStepExecution
  */
 class MediaExportStep extends AbstractStep
 {

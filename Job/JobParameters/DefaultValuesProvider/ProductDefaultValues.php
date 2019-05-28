@@ -2,9 +2,9 @@
 
 namespace Snowio\Bundle\CsvConnectorBundle\Job\JobParameters\DefaultValuesProvider;
 
-use Akeneo\Component\Batch\Job\JobInterface;
-use Akeneo\Component\Batch\Job\JobParameters\DefaultValuesProviderInterface;
-use Pim\Component\Connector\Job\JobParameters\DefaultValuesProvider\ProductCsvExport as BaseProductCsvExport;
+use Akeneo\Tool\Component\Batch\Job\JobInterface;
+use Akeneo\Tool\Component\Batch\Job\JobParameters\DefaultValuesProviderInterface;
+use Akeneo\Pim\Enrichment\Component\Product\Connector\Job\JobParameters\DefaultValueProvider\ProductCsvExport as BaseProductCsvExport;
 
 class ProductDefaultValues extends BaseProductCsvExport implements DefaultValuesProviderInterface
 {
