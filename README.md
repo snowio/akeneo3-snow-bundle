@@ -1,7 +1,7 @@
-Akeneo 2 Snow Bundle
+Akeneo 3 Snow Bundle
 =====================================
 
-This is a custom Akeneo 2 bundle.
+This is a custom Akeneo 3 bundle.
 
 ## Purpose
 
@@ -18,7 +18,7 @@ Both jobs have the following final steps: Generate metadata, Zip files, send to 
 
 To install this bundle on a Akeneo 2 instance, run the following:
 
-`composer require snowio/akeneo2-snow-bundle`
+`composer require snowio/akeneo3-snow-bundle`
 
 ### Configure threshold check step
 
