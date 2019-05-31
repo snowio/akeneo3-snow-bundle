@@ -3,9 +3,9 @@
 namespace spec\Snowio\Bundle\CsvConnectorBundle\Job\JobParameters\ConstraintCollectionProvider;
 
 use PhpSpec\ObjectBehavior;
-use Akeneo\Component\Batch\Job\JobParameters\ConstraintCollectionProviderInterface;
+use Akeneo\Tool\Component\Batch\Job\JobParameters\ConstraintCollectionProviderInterface;
 use Symfony\Component\Validator\Constraints\Collection;
-use Akeneo\Component\Batch\Job\JobInterface;
+use Akeneo\Tool\Component\Batch\Job\JobInterface;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
 class ProductConstraintSpec extends ObjectBehavior
@@ -22,7 +22,7 @@ class ProductConstraintSpec extends ObjectBehavior
     // @codingStandardsIgnoreLine
     public function it_is_a_default_values()
     {
-        $this->shouldImplement('Akeneo\Component\Batch\Job\JobParameters\ConstraintCollectionProviderInterface');
+        $this->shouldImplement('Akeneo\Tool\Component\Batch\Job\JobParameters\ConstraintCollectionProviderInterface');
     }
 
     // @codingStandardsIgnoreLine

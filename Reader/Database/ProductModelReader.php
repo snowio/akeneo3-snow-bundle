@@ -2,7 +2,7 @@
 
 namespace Snowio\Bundle\CsvConnectorBundle\Reader\Database;
 
-use Pim\Component\Connector\Reader\Database\ProductReader as BaseProductModelReader;
+use Akeneo\Pim\Enrichment\Component\Product\Connector\Reader\Database\ProductReader as BaseProductModelReader;
 
 class ProductModelReader extends BaseProductModelReader
 {

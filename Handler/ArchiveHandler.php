@@ -2,9 +2,9 @@
 
 namespace Snowio\Bundle\CsvConnectorBundle\Handler;
 
-use Akeneo\Component\Batch\Item\AbstractConfigurableStepElement;
-use Akeneo\Component\Batch\Model\StepExecution;
-use Akeneo\Component\Batch\Step\StepExecutionAwareInterface;
+use Akeneo\Tool\Component\Batch\Item\AbstractConfigurableStepElement;
+use Akeneo\Tool\Component\Batch\Model\StepExecution;
+use Akeneo\Tool\Component\Batch\Step\StepExecutionAwareInterface;
 
 class ArchiveHandler extends AbstractConfigurableStepElement implements StepExecutionAwareInterface
 {

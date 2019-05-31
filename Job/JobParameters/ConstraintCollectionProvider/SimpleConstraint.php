@@ -2,9 +2,9 @@
 
 namespace Snowio\Bundle\CsvConnectorBundle\Job\JobParameters\ConstraintCollectionProvider;
 
-use Akeneo\Component\Batch\Job\JobInterface;
-use Akeneo\Component\Batch\Job\JobParameters\ConstraintCollectionProviderInterface;
-use Pim\Component\Connector\Job\JobParameters\ConstraintCollectionProvider\SimpleCsvExport as BaseSimpleCsvExport;
+use Akeneo\Tool\Component\Batch\Job\JobInterface;
+use Akeneo\Tool\Component\Batch\Job\JobParameters\ConstraintCollectionProviderInterface;
+use Akeneo\Tool\Component\Connector\Job\JobParameters\ConstraintCollectionProvider\SimpleCsvExport as BaseSimpleCsvExport;
 
 class SimpleConstraint extends BaseSimpleCsvExport implements ConstraintCollectionProviderInterface
 {

@@ -2,9 +2,9 @@
 
 namespace Snowio\Bundle\CsvConnectorBundle\Handler;
 
-use Akeneo\Component\Batch\Model\StepExecution;
-use Akeneo\Component\Batch\Step\StepExecutionAwareInterface;
-use Akeneo\Component\Batch\Item\AbstractConfigurableStepElement;
+use Akeneo\Tool\Component\Batch\Model\StepExecution;
+use Akeneo\Tool\Component\Batch\Step\StepExecutionAwareInterface;
+use Akeneo\Tool\Component\Batch\Item\AbstractConfigurableStepElement;
 use GuzzleHttp\ClientInterface;
 
 class PostHandler extends AbstractConfigurableStepElement implements StepExecutionAwareInterface
@@ -71,7 +71,7 @@ class PostHandler extends AbstractConfigurableStepElement implements StepExecuti
     }
 
     /**
-     * @param \Akeneo\Component\Batch\Model\StepExecution $stepExecution
+     * @param \Akeneo\Tool\Component\Batch\Model\StepExecution $stepExecution
      * @author Cristian Quiroz <cq@amp.co>
      */
     public function setStepExecution(StepExecution $stepExecution)
