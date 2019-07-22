@@ -96,17 +96,6 @@ extensions:
             label: pim_common.label
             readOnly: false
 
-    snowio-csv-product-export-edit-properties-file-path:
-        module: pim/job/common/edit/field/text
-        parent: snowio-csv-product-export-edit-global
-        position: 120
-        targetZone: properties
-        config:
-            fieldCode: configuration.filePath
-            readOnly: false
-            label: pim_import_export.form.job_instance.tab.properties.file_path.title
-            tooltip: pim_import_export.form.job_instance.tab.properties.file_path.help
-
     snowio-csv-product-export-edit-properties-decimal-separator:
         module: pim/job/common/edit/field/decimal-separator
         parent: snowio-csv-product-export-edit-global
