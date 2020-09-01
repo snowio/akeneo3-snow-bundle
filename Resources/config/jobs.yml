@@ -35,6 +35,8 @@ services:
             - '@event_dispatcher'
             - '@akeneo_batch.job_repository'
             -
+                - '@snowio_connector.step.csv_product.export'
+                - '@snowio_connector.step.csv_product_model.export'
                 - '@snowio_connector.step.csv_category.export'
                 - '@snowio_connector.step.csv_attribute.export'
                 - '@snowio_connector.step.csv_attribute_option.export'
