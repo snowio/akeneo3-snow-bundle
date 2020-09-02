@@ -2,11 +2,12 @@
 
 namespace Snowio\Bundle\CsvConnectorBundle\Reader\Database;
 
-use Akeneo\Pim\Enrichment\Component\Product\Connector\Reader\Database\ProductReader as BaseProductModelReader;
+use Akeneo\Pim\Enrichment\Component\Product\Connector\Reader\Database\ProductReader as BaseProductReader;
 
-class ProductModelReader extends BaseProductModelReader
+class ProductReader extends BaseProductReader
 {
     use UpdatedFilterTrait;
+
     const PARTIAL_EXPORT = "partial_export";
 
     /**
@@ -16,6 +17,7 @@ class ProductModelReader extends BaseProductModelReader
      */
     protected function getConfiguredFilters()
     {
+        $configuredFilters = parent::getConfiguredFilters();
 
         $jobName = $this->stepExecution
             ->getJobExecution()
@@ -23,9 +25,9 @@ class ProductModelReader extends BaseProductModelReader
             ->getJobName();
 
         if ($jobName !== self::PARTIAL_EXPORT) {
-            return [];
+            return $configuredFilters;
         }
 
-        return $this->updateConfiguredFilters([]);
+        return $this->updateConfiguredFilters($configuredFilters);
     }
 }
