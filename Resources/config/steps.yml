@@ -84,6 +84,7 @@ services:
         parent: 'pim_connector.step.csv_product.export'
         arguments:
             index_0: 'product'
+            index_3: '@snowio_connector.reader.database.product'
             index_5: '@snowio_connector.writer.file.csv_product'
 
     snowio_connector.step.csv_product_model.export:

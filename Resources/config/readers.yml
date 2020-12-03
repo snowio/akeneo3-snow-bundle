@@ -1,7 +1,11 @@
 parameters:
-  snowio_connector.reader.database.product.class: Snowio\Bundle\CsvConnectorBundle\Reader\Database\ProductModelReader
+  snowio_connector.reader.database.product.class: Snowio\Bundle\CsvConnectorBundle\Reader\Database\ProductReader
+  snowio_connector.reader.database.product_model.class: Snowio\Bundle\CsvConnectorBundle\Reader\Database\ProductModelReader
 
 services:
   snowio_connector.reader.database.product_model:
-    class: %snowio_connector.reader.database.product.class%
+    class: %snowio_connector.reader.database.product_model.class%
     parent: pim_connector.reader.database.product_model
+  snowio_connector.reader.database.product:
+    class: %snowio_connector.reader.database.product.class%
+    parent: pim_connector.reader.database.product
