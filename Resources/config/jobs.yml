@@ -1,6 +1,7 @@
 parameters:
     snowio_connector.connector_name.csv: 'Snowio Connector'
     snowio_connector.job_name.full_export: 'full_export'
+    snowio_connector.job_name.s3_full_export: 's3_full_export'
     snowio_connector.job_name.partial_export: 'partial_export'
 
 services:
@@ -31,7 +32,7 @@ services:
     snowio_connector.job.s3_full_export:
         class: '%pim_connector.job.simple_job.class%'
         arguments:
-            - '%snowio_connector.job_name.s3_full_export%'
+            - '%snowio_connector.job_name.full_export%'
             - '@event_dispatcher'
             - '@akeneo_batch.job_repository'
             - - '@snowio_connector.step.csv_product.export'
