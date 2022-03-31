@@ -34,7 +34,7 @@ snowio_connector.form.job_instance.tab.properties:
 
 batch_jobs:
   partial_export:
-    label: Partial TEST Export (product updates, product model updates, categories, attributes, attribute options, families and attribute groups)
+    label: Partial Export (product updates, product model updates, categories, attributes, attribute options, families and attribute groups)
     category.label:  Category Export Step
     attribute.label: Attribute Export Step
     attribute_option.label: Attribute Option Export Step
@@ -57,4 +57,17 @@ batch_jobs:
     metadata.label: Metadata Step
     post.label: Post Step
     media_export.label: Media Export Step
+    check_thresholds.label: Check Thresholds Step
+  full_export_S3:
+    label: Full Export (AWS S3 Storage) (products, product models, categories, attributes, attribute options, families and attribute groups)
+    product.label: Product Export Step
+    product_model.label: Product model Export Step
+    category.label: Category Export Step
+    attribute.label: Attribute Export Step
+    attribute_option.label: Attribute Option Export Step
+    family.label: Family Export Step
+    attribute_group.label: Attribute Group Export Step
+    archive.label: Archive Step
+    metadata.label: Metadata Step
+    post.label: Post Step
     check_thresholds.label: Check Thresholds Step
