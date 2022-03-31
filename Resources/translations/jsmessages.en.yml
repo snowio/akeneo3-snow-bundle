@@ -58,7 +58,7 @@ batch_jobs:
     post.label: Post Step
     media_export.label: Media Export Step
     check_thresholds.label: Check Thresholds Step
-  full_export_S3:
+  s3_full_export:
     label: Full Export (AWS S3 Storage) (products, product models, categories, attributes, attribute options, families and attribute groups)
     product.label: Product Export Step
     product_model.label: Product model Export Step
