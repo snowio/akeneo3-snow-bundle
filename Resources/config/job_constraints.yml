@@ -16,7 +16,7 @@ services:
       class: '%snowio_connector.job.job_parameters.constraint_collection_provider.product.class%'
       arguments:
         - '@akeneo_pim_enrichment.job.job_parameters.constraint_collection_provider.simple_csv_export'
-        - [ 'full_export' ]
+        - [ 's3_full_export' ]
       tags:
         - { name: akeneo_batch.job.job_parameters.constraint_collection_provider }
 

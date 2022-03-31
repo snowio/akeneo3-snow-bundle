@@ -19,7 +19,7 @@ services:
         - '@akeneo_pim_enrichment.job.job_parameters.default_values_provider.simple_csv_export'
         - '@pim_catalog.repository.channel'
         - '@pim_catalog.repository.locale'
-        - [ 'full_export' ]
+        - [ 's3_full_export' ]
       tags:
         - { name: akeneo_batch.job.job_parameters.default_values_provider }
 
