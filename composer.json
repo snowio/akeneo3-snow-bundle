@@ -25,7 +25,7 @@
     }
   ],
   "require": {
-    "akeneo/pim-community-dev": "3.*.*",
+    "akeneo/pim-community-dev": "5.*.*",
     "guzzlehttp/guzzle": "^6.1",
     "symfony/config": "^3.4.0",
     "symfony/dependency-injection": "^3.4.0",
