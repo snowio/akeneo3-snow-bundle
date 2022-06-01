@@ -34,7 +34,7 @@ snowio_connector.form.job_instance.tab.properties:
 
 batch_jobs:
   partial_export:
-    label: Partial Export (product updates, product model updates, categories, attributes, attribute options, families and attribute groups)
+    label: Partial Export TEST (product updates, product model updates, categories, attributes, attribute options, families and attribute groups)
     category.label:  Category Export Step
     attribute.label: Attribute Export Step
     attribute_option.label: Attribute Option Export Step
