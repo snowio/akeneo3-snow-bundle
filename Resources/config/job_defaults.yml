@@ -13,6 +13,16 @@ services:
         tags:
             - { name: akeneo_batch.job.job_parameters.default_values_provider }
 
+    snowio_connector.job.job_parameters.default_values_provider.s3_full_export:
+        class: '%snowio_connector.job.job_parameters.default_values_provider.product.class%'
+        arguments:
+            - '@akeneo_pim_enrichment.job.job_parameters.default_values_provider.simple_csv_export'
+            - '@pim_catalog.repository.channel'
+            - '@pim_catalog.repository.locale'
+            - [ 's3_full_export' ]
+        tags:
+            - { name: akeneo_batch.job.job_parameters.default_values_provider }
+
     snowio_connector.job.job_parameters.default_values_provider.partial_export:
         class: '%snowio_connector.job.job_parameters.default_values_provider.product.class%'
         arguments:

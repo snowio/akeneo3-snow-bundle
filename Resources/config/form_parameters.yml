@@ -4,6 +4,7 @@ services:
         arguments:
             -
                 full_export: snowio-csv-product-export
+                s3_full_export: snowio-csv-product-s3-export
                 partial_export: snowio-csv-product-export
         tags:
             - { name: pim_enrich.provider.form, priority: 100 }
